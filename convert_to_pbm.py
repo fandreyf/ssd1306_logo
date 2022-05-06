@@ -1,4 +1,14 @@
+import argparse
 from PIL import Image, ImageFilter
+
+
+parser=argparse.ArgumentParser(description='Convert_to_pbm tool')
+parser.add_argument('-f', required=True, help='Enter filename path')
+#parser.add_argument('-s', help='Enter resize (64,64)')
+args=parser.parse_args()
+
+filename=args.f
+#size=args.s
 
 #Get bite array for oled display
 def get_data_array(filename):
@@ -40,7 +50,7 @@ def resize(filename,size=(32,32)):
 
 def main():
     print(f'Convert finish!!!\nCopy bytearray\n')
-    print(convert_to_pbm('btc.jpg'))
+    print(convert_to_pbm(filename))
 
 if __name__ == '__main__':
     main()
