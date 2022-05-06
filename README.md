@@ -1,2 +1,5 @@
 # ssd1306_logo
-generate simple logo for ssd1306, micropython implementation
+Generate simple logo for ssd1306, Raspberry Pi Pico micropython implementation.
+
+***For example:***
+*python3 convert_to_pbm.py -f 'DAB.png'*
